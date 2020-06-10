@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto&display=swap" rel="stylesheet"></head>
   <body>
-    <h1 id="page-title">Ben Clark's Photography Survey!</h1>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Photographers Survey</h1>
+        <p id="description" class="description text-center">A short survey to help recommend the best photography products for your needs</p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <p>How long have you been taking photographs?</p>
+          <select class="form-control" required>
+            <option disabled selected value>Choose one</option>
+            <option value="beginner">Less than one year</option>
+            <option value="intermediate">1-2 years</option>
+            <option value="semi-pro">3-5 years</option>
+            <option value="pro">over 5 years</option>
+            <option value="seasoned pro">over a lifetime</option>
+          </select>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
