@@ -46,6 +46,7 @@
             <input name="user-recommend" value="working-professional" type="radio" class="input-radio" checked>
             Working Professional
           </label>
+        </div>
           <div class="form-group">
             <p>
               What kind of photography best suites your interest?
@@ -104,7 +105,56 @@
               Entertainment and Music
             </label>
           </div>
-        </div>
+          <div class="form-group">
+            <p>Do you prefer to shoot on film, digital, or both?</p>
+            <label>
+              <input name="user-recommend" value="film" type="radio" class="input-radio" checked>
+              Film
+            </label>
+            <label>
+              <input name="user-recommend" value="digital" type="radio" class="input-radio" checked>
+              Digital
+            </label>
+            <label>
+              <input name="user-recommend" value="both" type="radio" class="input-radio" checked>
+              Both
+            </label>
+          </div>
+          <div class="form-group">
+            <p>Do you prefer to shoot images in color or black and white?</p>
+            <label>
+              <input name="user-recommend" value="color" type="radio" class="input-radio" checked>
+              Color
+            </label>
+            <label>
+              <input name="user-recommend" value="black-and-white" type="radio" class="input-radio" checked>
+              Black and White
+            </label>
+          </div>
+          <div class="form-group">
+            <label id="question-label" for="question">What camera system do you shoot with?</label>
+            <input type="text" name="camera-system" id="camera" class="form-control" placeholder="camera manufacturer" required>
+          </div>
+          <div class="form-group">
+            <p>Do you shoot pictures with your mobile device or cell phone?</p>
+            <label>
+              <input name="user-recommend" value="yes" type="radio" class="input-radio" checked>
+              Yes
+            </label>
+            <label>
+              <input name="user-recommend" value="no" type="radio" class="input-radio" checked>
+              No
+            </label>
+          </div>
+          <div class="form-group">
+            <p>Additional comments?</p>
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="Additional Comments..."></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
       </form>
     </div>
   </body>
