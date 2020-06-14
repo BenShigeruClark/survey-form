@@ -6,6 +6,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: block;
 }
 
 .container {
@@ -19,6 +20,9 @@ body {
   width: 885px;
   text-align: center;
   margin: auto;
-  border-radius: 15px;
+  border-radius: 18px;
 }
 
+.form-control {
+  margin-top: 10px;
+}
