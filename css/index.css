@@ -14,9 +14,11 @@ body {
 }
 
 #survey-form {
-  background: rgb(196, 196, 196);
+  background: rgb(156, 156, 156);
   opacity: 0.8;
-  width: 800px;
+  width: 885px;
   text-align: center;
   margin: auto;
+  border-radius: 15px;
 }
+
