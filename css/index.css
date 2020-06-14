@@ -1,4 +1,22 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
+  background-image: url("../img/benClarkPort2020-4894.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  margin: auto;
+}
+
+#survey-form {
+  background: rgb(196, 196, 196);
+  opacity: 0.8;
+  width: 800px;
+  text-align: center;
+  margin: auto;
 }
