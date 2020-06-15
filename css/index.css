@@ -1,35 +1,57 @@
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #fafafa;
+  --color-darkgrey-alpha: rgba(44, 44, 44, 0.8);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-darkblue);
+  margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
-  background-image: url("../img/benClarkPort2020-4894.jpg");
   height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* display: block; */
-  background-attachment: fixed;
+  background-attachment: fixed; 
+}
+
+body::before {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1 
+  z-index: -1;
+  background: rgb(83, 83, 83);
+  background-image: url("../img/benClarkPort2020-4894.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1 {
   font-weight: 400;
   line-height: 1.2;
+  color: black;
 }
 
 p {
   font-size: 1.125rem;
-}
-
-h1,
-p {
+  color: white;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem
 }
 
 label {
@@ -39,37 +61,71 @@ label {
   margin-bottom: 0.5rem;
 }
 
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+}
+
 .container {
   width: 100%;
   margin: 3.125rem auto 0 auto;
+  border-radius: 15px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.description {
+  color: black;
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.text-center {
   text-align: center;
-  position: fixed; 
-  overflow-y: scroll;
-  top: 0; right: 0; bottom: 0; left: 0;
 }
 
-#survey-form {
-  background: rgb(156, 156, 156);
-  opacity: 0.8;
-  width: 885px;
-  text-align: center;
-  margin: auto;
-  border-radius: 18px;
+form {
+  background: var(--color-darkgrey-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 15px;
 }
 
-.form-control {
-  margin-top: 10px;
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
 }
-
-/* .form-group {
-  font-size: 1.2em;
-  position: relative;
-  margin: 0 auto;
-  padding: 1em;
-  box-sizing: border-box;
-  display: grid;
-  grid-gap: 20px;
-} */
 
 .form-group {
   margin: 0 auto 1.25rem auto;
@@ -92,25 +148,15 @@ label {
 .form-control:focus {
   border-color: #98b7d8;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(95, 95, 95, 0.747);
 }
 
 .input-radio,
 .input-checkbox {
   display: inline-block;
-  margin-right: 0.625rem;
+  margin-right: 0.500rem;
   min-height: 1.25rem;
   min-width: 1.25rem;
-}
-
-input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
 }
 
 .input-textarea {
@@ -120,59 +166,33 @@ input {
   resize: vertical;
 }
 
-/* label {
-  float: left;
-  position: absolute;
-  top: 200px;
-  left: 200px; 
-  margin-left: 20px; 
- }   */
-
-input,
-button,
-select,
-textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button {
-  border: none;
-}
-
- form {
-   /* max-width: 900px; */
-   /* margin-left: auto;
-   margin-right: auto;
-   text-align: right; */
-   padding: 2.5rem 0.625rem;
-   border-radius: 0.25rem;
- }
-
-#title {
-  margin: 30px;
-  padding: 10px
-}
-
-#description {
-  margin: 20px;
-  padding: 10px;
-  font-style: italic;
-}
-
 .submit-button {
   display: block;
   width: 100%;
   padding: 0.75rem;
-  background: var(gray);
-  color: inherit;
+  background: var(rgb(88, 88, 88));
+  color: black;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.text-center {
-  text-align: center;
+#submit {
+  background-color: rgb(201, 201, 201);
 }
+
+#survey-form {
+  width: 900px;
+  left: 50%;
+  margin-left: -98px;
+}
+
+#title {
+  font-size: 3rem;
+}
+
+
+
+
+
+
 
